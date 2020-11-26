@@ -1,3 +1,14 @@
+* {
+    /*Почитай про это свойство и зачем оно нужно*/
+    box-sizing: border-box;
+}
+
+/*
+-- Почитай когда использовать margin, а когда padding
+-- Разберись с классами по БЭМ'у
+-- Покажи как ты можешь использовать вложенные селекторы, +, > и подобное.
+*/
+
 .bodyBackground {
     background-color: #7fffd4;
 }
@@ -47,12 +58,12 @@
 }
 
 .menuBtn:hover {
-    background: linear-gradient( #87b8b8, #e66465);
+    background: linear-gradient(#87b8b8, #e66465);
     transform: rotate(90deg);
 }
 
 .menuBtn:nth-of-type(2):hover {
-    background: linear-gradient( #87b8b8, #e66465);
+    background: linear-gradient(#87b8b8, #e66465);
     transform: rotate(-90deg);
 }
 
@@ -73,12 +84,11 @@
 }
 
 .mainContainer {
-    display: flex;
     background-color: aliceblue;
-    flex-wrap: wrap;
 }
 
 .mainTitle {
+    padding: 8px;
     width: 100%;
     background-color: rgb(13, 112, 116);
 }
@@ -87,7 +97,6 @@
     font-size: 20px;
     border: 4px solid #7b68ee;
     background-color: beige;
-    margin: 8px;
     padding: 8px;
 }
 
@@ -97,8 +106,9 @@
 }
 
 .mainMenu {
-    flex-grow: 3;
     display: flex;
+    /*повтори и поэкспериментируй с свойствами flex, flex-basis, flx-shrink, flex-grow*/
+    flex: 1 0 auto;
     flex-wrap: wrap;
     align-content: flex-start;
     flex-direction: row;
@@ -112,12 +122,12 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
     width: 20%;
     background-color: #b0e0e6;
     padding: 8px;
     margin: 8px;
     border: 4px solid #7b68ee;
+    flex: 0 0 auto
 }
 
 .mainTabs:last-child {
